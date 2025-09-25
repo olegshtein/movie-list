@@ -1,0 +1,36 @@
+import type { Movie } from './types.ts'
+
+const movies: Movie[] = [
+  { name: 'Побег из Шоушенка',
+    poster: 'src/shared/assets/images/posters/shawshank-redemption.webp',
+    year: 1994 },
+  { name: 'Крёстный отец',
+    poster: 'src/shared/assets/images/posters/godfather.webp',
+    year: 1972 },
+  { name: 'Тёмный рыцарь',
+    poster: 'src/shared/assets/images/posters/dark-knight.webp',
+    year: 2008 },
+  { name: 'Крёстный отец 2',
+    poster: 'src/shared/assets/images/posters/godfather-2.webp',
+    year: 1974 },
+  { name: '12 разгневанных мужчин',
+    poster: 'src/shared/assets/images/posters/twelve-angry-men.webp',
+    year: 1957 },
+  { name: 'Властелин колец: Возвращение короля',
+    poster: 'src/shared/assets/images/posters/lotr-return.webp',
+    year: 2003 },
+  { name: 'Список Шиндлера',
+    poster: 'src/shared/assets/images/posters/schindler-list.webp',
+    year: 1993 },
+  { name: 'Криминальное чтиво',
+    poster: 'src/shared/assets/images/posters/pulp-fiction.webp',
+    year: 1994 },
+  { name: 'Властелин колец: Братство Кольца',
+    poster: 'src/shared/assets/images/posters/lotr-fellowship.webp',
+    year: 2001 },
+  { name: 'Форрест Гамп',
+    poster: 'src/shared/assets/images/posters/forrest-gump.webp',
+    year: 1994 },
+]
+
+export default movies

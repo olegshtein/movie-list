@@ -1,8 +1,9 @@
+import MovieList from '@/widgets/MovieList'
 import './styles'
 
 const App = () => {
   return (
-    <div>Text</div>
+    <MovieList></MovieList>
   )
 }
 
