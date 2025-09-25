@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 30px;
+  font-family: Tahoma, Arial, Verdana, sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
