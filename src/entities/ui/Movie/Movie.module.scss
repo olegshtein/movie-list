@@ -1,5 +1,9 @@
+@use '@/shared/styles/mixins' as *;
+
 .movie {
   position: relative;
+
+  @include hover-scale;
 
   &.isFavorite {
     --heart-icon-color: var(--color-red);
@@ -15,11 +19,8 @@
   height: 50px;
   border: none;
   background-color: transparent;
-  transition: scale 0.3s;
 
-  &:hover {
-    scale: 1.2;
-  }
+  @include hover-scale;
 }
 
 .heartIcon {
