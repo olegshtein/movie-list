@@ -1,0 +1,27 @@
+.movie {
+  position: relative;
+
+  &.isFavorite {
+    --heart-icon-color: var(--color-red);
+  }
+}
+
+.heartButton {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+.heartIcon {
+  color: var(--heart-icon-color, #828282);
+}

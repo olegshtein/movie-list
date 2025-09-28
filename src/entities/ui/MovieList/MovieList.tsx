@@ -1,19 +1,13 @@
 import movies from '@/entities/movie/model/mock.ts'
+import Movie from '@/entities/ui/Movie'
 import styles from './MovieList.module.scss'
 
 const MovieList = () => {
   return (
     <ul className={styles.movieList}>
       {movies.map(({ name, poster, year }) => (
-        <li className={styles.movieListItem} key={crypto.randomUUID()}>
-          <a href="" target="_blank">
-            <img
-              width={600}
-              height={900}
-              src={poster}
-              alt={`${name} (${year})`}
-            />
-          </a>
+        <li key={crypto.randomUUID()}>
+          <Movie name={name} poster={poster} year={year} />
         </li>
       ))}
     </ul>
