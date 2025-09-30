@@ -1,6 +1,6 @@
-import type { Movie } from './types.ts'
+import type { MovieType } from './types.ts'
 
-export const movies: Movie[] = [
+export const movies: MovieType[] = [
   {
     id: crypto.randomUUID(),
     name: 'Побег из Шоушенка',

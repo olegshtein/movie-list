@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import clsx from 'clsx'
-import type { Movie as MovieType } from '@/entities/movie'
+import type { MovieType } from '@/entities/movie'
+import { LOCAL_STORAGE_KEYS } from '@/shared/constants/constants.ts'
 import HeartIcon from '@/shared/assets/icons/heart.svg?react'
 import styles from './Movie.module.scss'
 
@@ -11,7 +12,7 @@ const Movie = (props: MovieType) => {
 
   useEffect(() => {
     const movies: MovieType[] = JSON.parse(
-      localStorage.getItem('movies') as string,
+      localStorage.getItem(LOCAL_STORAGE_KEYS.MOVIES) as string,
     )
     const newMovies = movies.map((movie) => {
       if (movie.id === id) {
@@ -21,7 +22,7 @@ const Movie = (props: MovieType) => {
       return movie
     })
 
-    localStorage.setItem('movies', JSON.stringify(newMovies))
+    localStorage.setItem(LOCAL_STORAGE_KEYS.MOVIES, JSON.stringify(newMovies))
   }, [isFavorite])
 
   return (
