@@ -1,9 +1,10 @@
 import { filterFields } from '@/entities/filter/model/mock'
-import type { FilterPropsType, ViewFilterType } from '@/entities/filter'
+import { useStore } from '@/shared/store/app/model/store.ts'
+import type { ViewFilterType } from '@/shared/store/app/model/types'
 import styles from './Filter.module.scss'
 
-const Filter = (props: FilterPropsType) => {
-  const { viewFilter, setViewFilter } = props
+const Filter = () => {
+  const { viewFilter, setFilter } = useStore()
 
   return (
     <form className={styles.filterForm}>
@@ -17,7 +18,7 @@ const Filter = (props: FilterPropsType) => {
             value={value}
             checked={value === viewFilter}
             onChange={(event) =>
-              setViewFilter(event.target.value as ViewFilterType)
+              setFilter(event.target.value as ViewFilterType)
             }
           />
         </label>

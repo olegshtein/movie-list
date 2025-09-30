@@ -1,12 +1,12 @@
+import { useStore } from '@/shared/store/app/model/store.ts'
 import { movies as moviesMock } from '@/entities/movie/model/mock'
 import type { MovieType } from '@/entities/movie'
-import type { ViewFilterType } from '@/entities/filter'
 import Movie from '@/entities/ui/Movie'
 import { LOCAL_STORAGE_KEYS } from '@/shared/constants/constants'
 import styles from './MovieList.module.scss'
 
-const MovieList = (props: { viewFilter: ViewFilterType }) => {
-  const { viewFilter } = props
+const MovieList = () => {
+  const { viewFilter } = useStore()
 
   let lcMovies = localStorage.getItem(LOCAL_STORAGE_KEYS.MOVIES)
 
