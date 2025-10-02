@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import clsx from 'clsx'
 import type { MovieType } from '@/entities/movie'
 import { LOCAL_STORAGE_KEYS } from '@/shared/constants/constants.ts'
@@ -27,9 +28,9 @@ const Movie = (props: MovieType) => {
 
   return (
     <div className={clsx(styles.movie, isFavorite && styles.isFavorite)}>
-      <a href="" target="_blank">
+      <Link to={`/movies/${id}`} target="_blank">
         <img width={600} height={900} src={poster} alt={`${name} (${year})`} />
-      </a>
+      </Link>
       <button
         className={styles.heartButton}
         type="button"

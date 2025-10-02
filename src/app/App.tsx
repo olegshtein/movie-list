@@ -1,13 +1,14 @@
-import MovieList from '@/entities/ui/MovieList'
-import Filter from '@/entities/ui/Filter'
+import { Routes, Route } from 'react-router-dom'
+import Home from '@/pages/Home'
+import MovieCard from '@/pages/MovieCard'
 import './styles'
 
 const App = () => {
   return (
-    <>
-      <Filter />
-      <MovieList />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/movies/:id" element={<MovieCard />} />
+    </Routes>
   )
 }
 
